@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>      
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body> 
+        <header>
+            <div class="p-5 mb-2 bg-info text-white">
+                    <div class ="container">
+                            <form action="/" method="Post">
+                                <div class="row">
+                                    <div class="col">
+                                     <input type="text" class="form-control" placeholder="Name" name="name" class="input">
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" class="form-control" placeholder="Surname" name="surname"class="input">
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" class="form-control" placeholder="Participation" name="comissao" class="input">
+                                    </div>
+                                    <div class="col">
+                                      <button type="submit" class="btn btn-outline-light">SEND</button>     
+                                    </div>
+                                </div>
+                               
+                            </form>
+        
+                    </div>   
+            </div>
+            
+        </header>
+        <div class ="container">
+                <center>
+                        <h2>Data</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                </center> 
+        </div>
+        <div class ="container">
+                <div class="row">
+                        <div class="coll">
+                                <table  class="table table-bordered">
+                                     
+                                         
+                                                 <thead>
+                                        
+                                                         <tr>
+                                                             <td>Name</td>
+                                                             <td>Surname</td>
+                                                             <td>Participation</td>
+                                                             <td>Action</td>
+                                                         </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                
+                                                          <% data.forEach(function(details) { %>
+                                                            <tr>
+                                                                <td><%= details.name %></td>
+                                                                <td><%= details.surname %></td>
+                                                                <td> <%= details.comissao %></td>
+                                                                <td><a href="/edit/<%= details._id %>" >Edit</a> . <a href="/delete/<%= details._id %>"
+                                                                    onclick="return confirm('Are you sure you want to delete?');">Delete</a></td> 
+                                                                
+                                                            </tr>   
+                                                         <% }) %>
+                                                         
+                                                        </tbody>      
+                                </table>
+                                
+                     </div> 
+                     <div class="coll">
+                            <iframe style="border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="550" height="300" src="https://charts.mongodb.com/charts-deployment-bguxc/embed/charts?id=1e051348-5765-41ae-88de-27eabb19b846&tenant=2a450653-273a-4f19-8585-461478e4eb49"></iframe>
+
+                    </div>
+                  
+                </div>     
+
+        </div>
+        
+    </body>
+</html>
