@@ -13,7 +13,7 @@ npm install mongodb --save
 npm install --save express-validator
 
 Para o desenvolvimento Visual Studio Code.
-O Bando de dados foi o MongoDB Atlas.
+O Banco de dados foi o MongoDB Atlas.
 Usei também o bootstrap 4
 
 Qualquer duvida pode entrar em contato comigo
