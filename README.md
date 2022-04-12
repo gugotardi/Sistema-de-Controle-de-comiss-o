@@ -1,5 +1,7 @@
-# projetos
-Challenge to work as software engineer at Cotabox https://cotabox.com.br/
+# Sistema de controle de comissão entre os empregados.
+
+Esse sistema recebe os valores de comissão de empregados de uma determinada empresa e exibe eles em um gráfico numa dashboard. 
+
 
 Para rodar o projeto é necessário usar os seguintes comandos
 
